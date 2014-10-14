@@ -1,0 +1,185 @@
+.custom-background {
+	background-size: cover;
+	z-index: -999;
+	width: 100%;
+}
+header {
+  margin-bottom: 30px;
+  .home &,
+  .front & {
+    background-image: image-url('header.jpg');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='header.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='header.jpg', sizingMethod='scale')";
+  }
+  &.header-work {
+    background-image: image-url('header-work.jpg');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='header-work.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='header-work.jpg', sizingMethod='scale')";
+  }
+  &.fancy-header {
+    @include background-size(cover);
+    background-position: top left;
+    background-repeat: no-repeat;
+    min-height: 57em;
+  }
+  overflow: hidden;
+}
+
+#main {
+  margin-bottom: 20px;
+  overflow: hidden;
+  @include container();
+  @if ($show-grid-backgrounds) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($wide-mobile) {
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+  @include at-breakpoint($tablet) {
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    max-width: 1080px;
+    padding-left: 0;
+    padding-right: 0;
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+	.category-work & {
+		margin-top: 10px;
+	}
+}
+
+.content {
+  @include at-breakpoint($wide-mobile) {
+     @include span-columns(4,6);
+  }
+  @include at-breakpoint($tablet) {
+     @include span-columns(7,10);
+    border-right: solid 1px #E0E0E0;
+    .single & {
+      border: none;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(9,12);
+  }
+  &.single-portfolio-item {
+    @include reset-columns;
+    border: none;
+  }
+}
+
+.main-navigation {
+  @include container();
+  padding-bottom: 5px;
+  ul.links {
+    display: inline-block;
+    float: left;
+  }
+  li {
+    display: inline-block;
+    border-left: solid 1px #E0E0E0;
+    border-bottom: solid 1px #E0E0E0;
+    padding: 0.2em 0.5em;
+    li.home {
+      @include hide-text();
+      a {
+      }
+    }
+    a {
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      border-right: solid 1px #E0E0E0;
+    }
+  }
+}
+.sub-menu {
+  display: none;
+}
+
+.intro {
+  text-align: center;
+  color: $grey-darker;
+  margin-top: 10em;
+  overflow: hidden;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $grey-light;
+    a:active,
+    &:hover {
+      text-decoration: underline;
+      color: $blue;
+      outline: 0;
+      -webkit-transition: width 400ms ease, background 400ms ease;
+      transition:         width 400ms ease, background 400ms ease;
+    }
+  }
+}
+.sub-intro {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 -2000px;
+  padding: 10px 2000px;
+  position: relative;
+  z-index: 5;
+  p {
+    position: relative;
+    opacity: 1;
+    color: $blue;
+    overflow: hidden;
+    z-index: 6;
+  }
+}
+
+.page-title {
+  text-align: left;
+  color: $grey-darker;
+}
+
+.site-footer {
+  border-top: solid 1px #E0E0E0;
+  padding-top: 20px;
+  @include container();
+  @if ($show-grid-backgrounds) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($wide-mobile) {
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+  @include at-breakpoint($tablet) {
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    max-width: 1080px;
+    // margin-top: -20px;
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+}
+
+h2.footer-title {
+  margin-top: 0;
+}
+
+.region-footer {
+  @include span-columns(4,12);
+  @include nth-omega(3n);
+}
+

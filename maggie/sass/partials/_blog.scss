@@ -1,0 +1,70 @@
+// Blog overview page.
+ul.entry-list {
+  list-style: none;
+  padding-left: 0;
+}
+.entry-list-item {
+	@include span-columns(6, 9);
+	margin-bottom: 30px;
+	.entry-title {
+		text-align: left;
+		margin-top: 0;
+		margin-bottom: 0;
+		&:before {
+			@extend %font-icoclassy;
+			content: "\e60a";
+			@include font-size(18,22);
+			margin-right: 10px;
+		}
+		a {
+			text-decoration: none;
+			@include font-size(22,22);
+		}
+	}
+}
+
+.read-more {
+	float: right;
+}
+
+// Single Template.
+.entry-date {
+	@include font-size(14,18);
+	color: $grey;
+	margin: 10px 0;
+}
+
+.entry-date-icon {
+
+}
+
+.icon-arrow-right:before {
+	@extend %font-icomoon;
+	display: inline-block;
+	// content: '\e614';
+	margin-left: 5px;
+}
+
+.format-image {
+	.entry-title {
+		&:before {
+			@extend %font-icoclassy;
+			content: "\e60d";
+			padding-right: 20px;
+			font-size: 40px;
+		}
+	}
+}
+.entry-title:before {
+		font-family: 'icoclassy';
+		content: "\e60e";
+		@extend %font-icoclassy;
+	}
+
+.entry-content {
+	@include span-columns(7,9);
+	// @include pre(1,7);
+}
+	.entry-footer {
+		clear: both;
+	}

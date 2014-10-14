@@ -1,0 +1,149 @@
+// Variables Partials
+//
+// All of your variables should go in this file.
+
+// Legacy IE support
+//
+// These variables are used by many mixins to add additional CSS to support
+// specific versions of IE or specific vendor prefixes.
+//
+// To turn on support for IE6 or IE7, set those variables to true.
+//
+// These variables are used throughout compass, but specifically within the
+// compass-normalize extension.
+// /
+// @import "icons/*.png";
+$legacy-support-for-ie  : true;
+$legacy-support-for-ie6 : $legacy-support-for-ie;
+$legacy-support-for-ie7 : $legacy-support-for-ie;
+
+
+// Font faces, stacks and sizes.
+//
+// Compass' vertical_rhythm extension is a powerful tool to set up a vertical
+// rhythm for your entire page. You can see some of its mixins and functions in
+// use in the normalize.scss file.
+// @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
+
+$base-font-size:   16; // The font size set on the root html element.
+$base-line-height: 24; // This line-height determines the basic unit of vertical rhythm.
+// $rhythm-unit: 'rem';
+
+$h1-font-size: 48px;
+$h2-font-size: 30px;
+$h3-font-size: 22px;
+$h4-font-size: 1          * $base-font-size;
+$h5-font-size: 0.83333333 * $base-font-size; // 10px
+$h6-font-size: 0.75       * $base-font-size; // 8px
+
+
+
+// The following font family declarations are based on the Microsoft core web
+// fonts which are common fonts available on most computer systems. The DejaVu
+// and Nimbus Sans fonts are commonly available on Linux systems where the MS
+// fonts are less common. Tahoma and Helvetica are also widely available.
+//
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+// First, let's create some font stacks.
+
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$arial:           Arial, Helvetica, sans-serif;
+$base_text:       'Source Sans Pro', Arial, sans-serif;
+$tnr:             Times New Roman, Georgia, serif;
+
+
+// Project-specific fonts
+// Put any font families here that are specific to your project
+$oswald:          'Oswald', impact, sans-serif;
+
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Now create some variables for the font stacks we want to use on this site.
+// $base-font-family: $istok; // The font family set on the html element.
+$font-body:        $base_text;
+$font-monospace:   $courier;
+$form-font-family: $font-monospace;
+
+
+// Colors, etc.
+
+$black          : #000;
+$white          : #fff;
+$beige          : #FBFAFA;
+$red            : #FC6C6C; //rgb(252, 108, 108);
+$darkertxtColor : #7B7B7B;
+$blue           : #2098B7;
+$yellow         : #FF0; //rgba(255, 255, 0
+
+$grey           : #5F5F5F;
+$grey-light     : #dddddd;
+$grey-darker    : #cbccce;
+
+$grey-border    : #6E6E6E;
+$grey-bg        : $grey-border;
+
+$mainColor      : $grey;
+$secondaryColor : $blue;
+$alertColor     : #e70000;
+$successColor   : #78af01;
+$highlightColor : #7DD7EF;
+$txtColor       : $mainColor;
+// Standard colors: for standard 4K and other brand colors.
+// Note: these are just for reference, and some brands have multiple colors.
+$color-facebook : #3B5998;
+$color-twitter  : #33CCFF;
+$color-youtube  : #FF3333;
+$color-pinterest: #990000;
+$color-skype    : #12A5F4;
+$color-flickr   : #FE0883;
+$color-foursquare: #8FD400;
+$color-instagram: #4E433C;
+$color-linkedin : #4875B4;
+$color-tumblr   : #2B4964;
+$color-vimeo    : #86B32D;
+$color-google   : #D6492C;
+$color-fk       : #66B360;
+
+// Base color variables.
+$text           : $txtColor;
+$link           : $red;
+$visited        : $link;
+$selection-bg   : #66B360;
+$selection      : $white;
+
+// Table colors.
+$thead          : #4479b1;
+$tbody          : #d5dde7;
+
+// Add Susy responsive layout settings.
+//
+// Susy operates using just five variables listed here. By adjusting these
+// variables, you can instantly change your grid without touching any of
+// the details of your implementation.
+//
+// @see http://susy.oddbird.net/guides/reference/
+
+$mobile         : 4;
+$wide-mobile    : 6;
+$tablet         : 10;
+$desktop        : 12;
+// $widescreen     : 16;
+//$desktop        : 16 ie8; //1100px
+
+$total-columns          : 4;
+$container-width        : 960px;
+$column-width           : 60px;
+$gutter-width           : 20px;
+$grid-padding           : $gutter-width;
+
+$container-style 				: fluid;
+
+$show-grid-backgrounds  : true;

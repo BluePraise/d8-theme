@@ -1,0 +1,31 @@
+/*!
+Theme Name: New LBC Mayconnect theme
+Theme URI: http://mayconnect.org/wordpress
+Author: @omg-its-maggie
+Author URI: http://mayconnect.org/
+Description: This theme is the new theme for Mayconnect
+Version: 0.01
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive, blogging, clean, white, mobile
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+@import "compass";
+@import "susy";
+@import "partials/tools/_variables.scss";
+@import "partials/tools/_mixins.scss";
+@import "partials/tools/_normalize.scss";
+@import "partials/tools/_overrides.scss";
+@import "partials/_fonts.scss";
+@import "partials/_forms.scss";
+@import "partials/_sitewide.scss";
+@import "partials/_base.scss";
+@import "partials/_entry.scss";
+@import "partials/_frontpage.scss";
+@import "partials/_sidebar.scss";
+@import "partials/_comments.scss";
+@import "partials/_portfolio.scss";
+@import "partials/_single-portfolio-item.scss";
+@import "partials/_blog.scss";
+@import "partials/_404.scss";

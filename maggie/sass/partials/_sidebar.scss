@@ -1,0 +1,56 @@
+.left-main-menu {
+	float: left;
+	padding: 0.5em;
+}
+
+.content-sidebar {
+	@include at-breakpoint($wide-mobile) {
+	   @include span-columns(2 omega,6);
+	}
+	 @include at-breakpoint($tablet) {
+	   @include span-columns(3 omega, 10);
+	 }
+	@include at-breakpoint($desktop) {
+	  @include span-columns(3 omega, 12);
+	}
+	aside {
+		ul {
+			padding-left: 20px;
+			padding-bottom: 20px;
+		}
+	}
+	aside > h2 {
+		color: $grey-light;
+		margin: 0 10px 10px 0;
+	}
+	a {
+		font-weight: 600;
+	}
+}
+
+.widget_recent_entries {
+	@include span-columns(2,4);
+	@include at-breakpoint($wide-mobile) {
+		@include reset-columns;
+		.h3 {
+			margin: 0 10px 10px 0;
+		}
+		ul {
+			li {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.widget_archive {
+	@include span-columns(2 omega,4);
+	@include at-breakpoint($wide-mobile) {
+		  @include reset-columns;
+	}
+}
+
+.widget_search {
+	@include span-columns(2,4);
+	margin-top: 30px;
+}

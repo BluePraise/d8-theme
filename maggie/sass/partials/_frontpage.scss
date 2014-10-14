@@ -1,0 +1,77 @@
+section {
+	.home & {
+		float: left;
+		h2 {
+			margin-top: 0;
+			margin-top: 0;
+			text-transform: uppercase;
+			&:before {
+				font-size: 16px;
+				padding-right: 25px;
+				vertical-align: top;
+			}
+		}
+	}
+}
+.about {
+	width: 100%;
+	.aboutme {
+		@include at-breakpoint($wide-mobile) {
+		  @include span-columns(3, 6);
+		}
+		@include at-breakpoint($tablet) {
+	 	 @include span-columns(5,10);
+		}
+		@include at-breakpoint($desktop) {
+	 	  @include span-columns(6,12);
+		}
+	}
+	.blogposts {
+		width: 100%;
+		@include at-breakpoint($wide-mobile) {
+		  @include span-columns(3 omega, 6);
+		}
+		@include at-breakpoint($tablet) {
+	 	 // @include span-columns(5 omega,10);
+		}
+		@include at-breakpoint($desktop) {
+	 	  @include span-columns(6 omega,12);
+	 	  @include prefix(1);
+		}
+	}
+}
+.portfolio-wrapper {
+	width: 100%;
+	margin-top: 30px;
+}
+.aboutme {
+	h2 {
+		&:before {
+			content: "\e60b";
+		}
+	}
+}
+
+.blogposts {
+	@extend %no-list-style-please;
+	h2 {
+		&:before {
+			content: "\e60a";
+		}
+	}
+	li {
+		margin-bottom: 10px;
+		&:before {
+			content: "\e616";
+			margin-right: 10px;
+		}
+	}
+	.front-comment {
+		content: "\e606";
+	}
+}
+
+.portfolio-link {
+	float:right;
+	margin: 0 10px;
+}

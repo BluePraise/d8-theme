@@ -1,0 +1,53 @@
+// contains all overrides for plugins.
+%no-fonticons-here {
+	&:before,
+	&:after {
+		content: '';
+		padding: 0;
+		margin: 0;
+	}
+}
+
+%no-list-style-please {
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+%font-icomoon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 10px;
+}
+%font-icoclassy {
+  font-family: 'icoclassy';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 10px;
+}
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

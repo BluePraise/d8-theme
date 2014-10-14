@@ -1,0 +1,55 @@
+.portfolio {
+	.page-template-archive-work-php & { // RESET COLUMNS FOR PORTFOLIO PAGE
+		@include reset-columns;
+		border: none;
+		padding: 0;
+	}
+	h3 {
+		margin: 0;
+	}
+}
+
+.portfolio-list {
+	overflow: hidden;
+}
+
+.portfolio-item {
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+	@include at-breakpoint($wide-mobile) {
+	  @include span-columns(3,6);
+		@include nth-omega(2n);
+	}
+	@include at-breakpoint($tablet) {
+		@include span-columns(5, 10);
+	}
+	@include at-breakpoint($desktop) {
+		@include span-columns(4, 12);
+		@include nth-omega(3n);
+	}
+}
+
+.portfolio-item-title {
+	margin: 0;
+	text-shadow: none;
+	text-transform: uppercase;
+	display: inline-block;
+	color: $blue;
+	.home & {
+		font-size: 0;
+	}
+}
+h2:before {
+	.page-template-archive-work-php & {
+		// display: inline-block;
+		// content: '\e616';
+		// color: $blue;
+		// margin-right: 5px;
+		// font-size: 15px;
+	}
+}
+
+.readmore {
+	padding-top: 20px;
+}
